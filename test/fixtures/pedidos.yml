@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente: one
+  data: 2021-01-01 19:45:10
+  valor_total: 1.5
+
+two:
+  cliente: two
+  data: 2021-01-01 19:45:10
+  valor_total: 1.5

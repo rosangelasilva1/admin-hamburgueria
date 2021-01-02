@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pedido: one
+  produto: one
+  unidade: MyString
+  quantidade: 1.5
+  valor_unitario: 1.5
+  valor_total_item: 1.5
+
+two:
+  pedido: two
+  produto: two
+  unidade: MyString
+  quantidade: 1.5
+  valor_unitario: 1.5
+  valor_total_item: 1.5
