@@ -14,7 +14,7 @@ class LoginController < ApplicationController
                 nome:administrador.nome,
                 email:administrador.email
                 }
-            cookies[:mundo_feliz_admin]={value:value_admin.to_s,expires:time_logado,httponly:true}
+            cookies[:mundo_feliz_admin]={value:value_admin.to_json,expires:time_logado,httponly:true}
             redirect_to "/home"
         else
             flash[:error]="Email ou senha inválidos"            
