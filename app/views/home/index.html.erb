@@ -51,7 +51,7 @@
                   <a href="/produto/<%=produto.id%>"><%=produto.nome%></a>
                 </h4>
                 <h5>R$ <%=produto.valor%></h5>
-                <p class="card-text"><%=produto.descricao%></p>
+                <p class="card-text"><%=produto.descricao.truncate(100)%></p>
               </div>
               <div class="card-footer">
                 <a href ="/produto/<%=produto.id%>/adicionar">Adicionar Carrinho</a>
