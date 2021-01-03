@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :tipo_produtos
   
   root  to: 'home#index'
+
+  get '/admin', to: 'admin#index'
   get '/home', to: 'home#index'
   get '/login', to: 'login#index'
   post '/login/logar', to: 'login#logar'
