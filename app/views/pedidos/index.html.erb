@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-plus"></span>
     Novo Pedido
   <% end %>
-  <h1>Listando pedidos</h1>
+  <h1>Listando Pedidos</h1>
 </div>
 
 <div class="table-responsive">
@@ -16,6 +16,7 @@
         <th></th>
         <th></th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
 
@@ -25,9 +26,9 @@
         <td><%= pedido.data %></td>
         <td><%= pedido.valor_total %></td>
         <td><%= link_to 'item', pedido_pedido_produtos_path(pedido) %></td>
-        <td><%= link_to 'Show', pedido %></td>
-        <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
-        <td><%= link_to 'Destroy', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', pedido %></td>
+        <td><%= link_to 'Editar', edit_pedido_path(pedido) %></td>
+        <td><%= link_to 'Apagar', pedido, method: :delete, data: { confirm: 'Confirma?' } %></td>
       <% end %>
     </tbody>
   </table>

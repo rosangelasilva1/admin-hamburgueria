@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-plus"></span>
     Novo Pedido produto
   <% end %>
-  <h1>Listando pedido_produtos</h1>
+  <h1>Listando Ítens do Pedido</h1>
 </div>
 
 <div class="table-responsive">
@@ -30,9 +30,9 @@
             <td><%= pedido_produto.quantidade %></td>
             <td><%= pedido_produto.valor_unitario %></td>
             <td><%= pedido_produto.valor_total_item %></td>
-            <td><%= link_to 'Show', pedido_pedido_produto_path(@pedido,pedido_produto) %></td>
-        <td><%= link_to 'Edit', edit_pedido_pedido_produto_path(@pedido,pedido_produto) %></td>
-        <td><%= link_to 'Destroy', pedido_pedido_produto_path(@pedido,pedido_produto), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Mostar', pedido_pedido_produto_path(@pedido,pedido_produto) %></td>
+        <td><%= link_to 'Editar', edit_pedido_pedido_produto_path(@pedido,pedido_produto) %></td>
+        <td><%= link_to 'Apagar', pedido_pedido_produto_path(@pedido,pedido_produto), method: :delete, data: { confirm: 'Confirma?' } %></td>
       <% end %>
     </tbody>
   </table>

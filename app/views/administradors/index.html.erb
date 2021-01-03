@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-plus"></span>
     Novo Administrador
   <% end %>
-  <h1>Listando administradors</h1>
+  <h1>Listando Administradores</h1>
 </div>
 
 <div class="table-responsive">
@@ -24,9 +24,9 @@
             <td><%= administrador.nome %></td>
             <td><%= administrador.email %></td>
             <td><%= administrador.senha %></td>
-            <td><%= link_to 'Show', administrador %></td>
-        <td><%= link_to 'Edit', edit_administrador_path(administrador) %></td>
-        <td><%= link_to 'Destroy', administrador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Mostrar', administrador %></td>
+        <td><%= link_to 'Editar', edit_administrador_path(administrador) %></td>
+        <td><%= link_to 'Apagar', administrador, method: :delete, data: { confirm: 'Confirma?' } %></td>
       <% end %>
     </tbody>
   </table>
