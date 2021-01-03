@@ -3,5 +3,7 @@ class HomeController < ApplicationController
     layout "site"
     def index 
         @produtos = Produto.all
+        @produtos = @produtos.where(tipo_produto_id: params[:tipo_produto]) if params[:tipo_produto].present?
+        
     end 
 end
