@@ -19,4 +19,17 @@ class ProdutoController < ApplicationController
         redirect_to "/home"
         
     end 
+
+    def remover
+        if cookies[:carrinho].blank?
+            redirect_to "/home"
+            return
+        end
+
+        produtos = JSON.parse(cookies[:carrinho])
+        produtos.delete(params[:produto_id])
+        cookies[:carrinho] = {value:produtos.to_json,expires:1.year.from_now,httponly:true}
+        redirect_to "/home"
+    
+    end 
 end
