@@ -29,7 +29,16 @@ class ProdutoController < ApplicationController
         produtos = JSON.parse(cookies[:carrinho])
         produtos.delete(params[:produto_id])
         cookies[:carrinho] = {value:produtos.to_json,expires:1.year.from_now,httponly:true}
-        redirect_to "/home"
+        redirect_to "/carrinho"
     
+    end 
+
+    def carrinho
+        if cookies[:carrinho].blank?
+            redirect_to "/home"
+        end
+        produtos = JSON.parse(cookies[:carrinho])
+        @produtos = Produto.where(id:produtos)
+
     end 
 end
