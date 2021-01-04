@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/login', to: 'login#index'
   post '/login/logar', to: 'login#logar'
   get '/login/sair', to: 'login#sair'
+  get '/produto/:produto_id',to: 'produto#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

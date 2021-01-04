@@ -1,0 +1,21 @@
+<div class="col-lg-10">
+  <div class="row">
+    <div class="col-lg-10 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="<%=@produto.imagem%>" alt="<%=@produto.nome%>">
+        <div class="card-body">
+          <h4 class="card-title">
+            <%=@produto.nome%>
+          </h4>
+          <h5>R$ <%=@produto.valor%></h5>
+          <p class="card-text"><%=@produto.descricao.truncate(100)%></p>
+        </div>
+        <div class="card-footer">
+          <a href ="/produto/<%=@produto.id%>/adicionar">Adicionar Carrinho</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.col-lg-9 -->
