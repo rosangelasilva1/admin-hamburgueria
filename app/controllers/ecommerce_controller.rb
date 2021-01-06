@@ -1,4 +1,4 @@
-class ProdutoController < ApplicationController
+class EcommerceController < ApplicationController
     skip_before_action  :valida_logado_admin
     layout "site"
     def index 
@@ -41,4 +41,8 @@ class ProdutoController < ApplicationController
         @produtos = Produto.where(id:produtos)
 
     end 
+
+    def fechar_carrinho
+
+    end
 end
