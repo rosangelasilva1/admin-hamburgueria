@@ -43,6 +43,12 @@ class EcommerceController < ApplicationController
     end 
 
     def fechar_carrinho
-
+        if cookies[:cliente_login].blank?
+            redirect_to "/cliente/logar"
+        end
     end
+
+    def login
+        
+    end 
 end
