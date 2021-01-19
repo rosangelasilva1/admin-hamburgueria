@@ -19,8 +19,11 @@ Rails.application.routes.draw do
   get '/produto/:produto_id/adicionar',to: 'ecommerce#adicionar'
   get '/produto/:produto_id/remover', to: 'ecommerce#remover'
   get '/carrinho',to:'ecommerce#carrinho'
-  get 'carrinho/fechar',to: 'ecommerce#fechar_carrinho' 
-  get 'cliente/logar',to:'ecommerce#login'
+  get '/carrinho/fechar',to: 'ecommerce#fechar_carrinho' 
+  get '/cliente/logar',to:'ecommerce#login'
+  get '/cliente/cadastrar',to: 'ecommerce#cadastrar'
+  post '/cliente/criar',to: 'ecommerce#criar'
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

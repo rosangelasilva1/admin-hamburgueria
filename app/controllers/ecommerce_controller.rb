@@ -51,4 +51,31 @@ class EcommerceController < ApplicationController
     def login
         
     end 
+
+    def cadastrar
+        @cliente = Cliente.new
+    end 
+
+    def criar
+        debugger
+        @cliente = Cliente.new(cliente_params)
+        if @cliente.save
+            cookies[:cliente_login] = {
+                value:{
+                    id:@cliente.id,
+                    nome:@cliente.nome,
+                    email:@cliente.email
+                },
+                expires:1.year.from_now,
+                httponly:true}
+
+            redirect_to '/carrinho/fechar'
+        else
+            redirect_to '/cliente/fechar'          
+        end
+    end 
+
+    def cliente_params
+        params.require(:cliente).permit(:nome, :enderco, :telefone, :cpf, :email, :numero, :cep, :bairro, :cidade, :estado)
+    end 
 end
